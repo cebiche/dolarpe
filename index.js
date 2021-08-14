@@ -3,6 +3,10 @@
 import 'console.table'
 import rp from 'request-promise'
 import cheerio from 'cheerio'
+import ora from 'ora'
+
+const spinner = ora('Loading...')
+spinner.start()
 
 const options = {
   uri: 'https://cuantoestaeldolar.pe/',
@@ -23,4 +27,6 @@ const prices = Array.from($('.list-change-online > .tb_dollar')).map((item) => {
   }
 })
 
+console.log('\n')
 console.table(prices)
+spinner.succeed('💰🤑💰')
