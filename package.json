@@ -11,8 +11,15 @@
   },
   "type": "module",
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Paul Diaz",
+    "url": "https://github.com/paulrrdiaz"
+  },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cebiche/dolarpe"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "console.table": "^0.10.0",
