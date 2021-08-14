@@ -1,6 +1,6 @@
 {
   "name": "@cebiche/dolarpe",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy way to see peruvian dollar exchange",
   "main": "index.js",
   "scripts": {
