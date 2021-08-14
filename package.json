@@ -1,0 +1,22 @@
+{
+  "name": "@cebiche/dolarpe",
+  "version": "1.0.0",
+  "description": "Easy way to see peruvian dollar exchange",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "dolarpe": "index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "console.table": "^0.10.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
