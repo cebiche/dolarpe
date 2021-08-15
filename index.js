@@ -42,7 +42,7 @@ console.table(sortedPrices)
 spinner.succeed('💰🤑💰')
 console.log('\n')
 console.log(`
-  Best option for today: ${highlight(bestOption)}
+  Best option for now: ${highlight(bestOption)}
   Website: ${highlight(url)}
   ${
     coupon && `Apply this coupon if you want more money 😏 ${highlight(coupon)}`
