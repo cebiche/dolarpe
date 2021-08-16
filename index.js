@@ -41,7 +41,6 @@ try {
   console.log('\n')
   console.table(sortedPrices)
   spinner.succeed('💰🤑💰')
-  console.log('\n')
   console.log(`
     Best option for now: ${highlight(bestOption)}
     ${url ? `Website: ${highlight(url)}` : ''}
@@ -51,7 +50,6 @@ try {
         : ''
     }
   `)
-  console.log('\n')
 } catch (err) {
   spinner.fail('Ups! something when wrong 🐛, try later please!')
 }
