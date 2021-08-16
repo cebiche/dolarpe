@@ -45,7 +45,9 @@ console.log(`
   Best option for now: ${highlight(bestOption)}
   Website: ${highlight(url)}
   ${
-    coupon && `Apply this coupon if you want more money 😏 ${highlight(coupon)}`
+    coupon
+      ? `Apply this coupon if you want more money 😏 ${highlight(coupon)}`
+      : ''
   }
 `)
 console.log('\n')
