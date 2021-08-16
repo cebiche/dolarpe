@@ -33,21 +33,25 @@ const prices = Array.from($('.list-change-online > .tb_dollar')).map((item) => {
   }
 })
 
-const sortedPrices = sort(descend(prop('Compra')), prices).slice(0, 10)
-const bestOption = sortedPrices[0].Empresa
-const { url, coupon } = exchangeHouses[bestOption]
+try {
+  const sortedPrices = sort(descend(prop('Compra')), prices).slice(0, 10)
+  const bestOption = sortedPrices[0].Empresa
+  const { url, coupon } = exchangeHouses[bestOption] || {}
 
-console.log('\n')
-console.table(sortedPrices)
-spinner.succeed('💰🤑💰')
-console.log('\n')
-console.log(`
-  Best option for now: ${highlight(bestOption)}
-  Website: ${highlight(url)}
-  ${
-    coupon
-      ? `Apply this coupon if you want more money 😏 ${highlight(coupon)}`
-      : ''
-  }
-`)
-console.log('\n')
+  console.log('\n')
+  console.table(sortedPrices)
+  spinner.succeed('💰🤑💰')
+  console.log('\n')
+  console.log(`
+    Best option for now: ${highlight(bestOption)}
+    ${url ? `Website: ${highlight(url)}` : ''}
+    ${
+      coupon
+        ? `Apply this coupon if you want more money 😏 ${highlight(coupon)}`
+        : ''
+    }
+  `)
+  console.log('\n')
+} catch (err) {
+  spinner.fail('Ups! something when wrong 🐛, try later please!')
+}

@@ -39,6 +39,9 @@ const exchangeHouses = {
   'Cambio Mundial': {
     url: 'https://www.cambiomundial.com/',
   },
+  'Hir Power': {
+    url: 'https://hirpower.com/',
+  },
 }
 
 export default exchangeHouses
